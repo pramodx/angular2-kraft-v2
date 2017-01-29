@@ -1,0 +1,54 @@
+<div class="container editor-form">
+    <h4>{{_mode }} Recipe </h4>
+    <div class="col-md-6 col-md-offset-3">
+        <form [ngFormModel]="recipeEditForm"  #f="ngForm">
+            <fieldset class="form-group">
+                <label for="name">Recipe Name</label>
+                <input type="text" class="form-control" id="name"  #name placeholder="Enter Recipe Name" [ngFormControl]="recipeEditForm.controls['name']">
+                <span class="error">Please enter a recipe name</span>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="product_id">Recipe Name</label>
+                <select class="form-control" id="product_id" name="product_id" #product_id  [ngFormControl]="recipeEditForm.controls['product_id']">
+                    <option value="">Select a Product</option>
+                    <option *ngFor="let product of products" value="{{product.id}}">{{product.title}}</option>
+                </select>
+                <span class="error">Please choose a product</span>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="need">What you need</label>
+                <textarea class="form-control" id="need" #need rows="6" placeholder="Enter Ingredients"  [ngFormControl]="recipeEditForm.controls['need']"></textarea>
+                <span class="error">Please enter a ingredients</span>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="making">How to make it</label>
+                <textarea class="form-control" id="making" #making rows="6" placeholder="Enter steps to make" [ngFormControl]="recipeEditForm.controls['making']"></textarea>
+                <span class="error">Please enter how to make</span>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="preptime">Preparation Time</label>
+                        <input type="text" class="form-control" id="preptime" #preptime placeholder="Preparation Time" [ngFormControl]="recipeEditForm.controls['preptime']">
+                        <span class="error">Please enter preparation time</span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="serves">Serves</label>
+                        <input type="text" class="form-control" id="serves" #serves placeholder="Serves" [ngFormControl]="recipeEditForm.controls['serves']">
+                        <span class="error">Please enter servings</span>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+                <div class="pull-right">
+                    <button (click)="goBack()" class="btn btn-cancel">Cancel</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
+                    <button [disabled]="!f.valid" (click)="onSubmit(name.value, product_id.value, need.value, making.value, preptime.value, serves.value)" class="btn btn-primary" [innerHTML]="_mode == 'Add' ? 'Submit' : 'Update'"></button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

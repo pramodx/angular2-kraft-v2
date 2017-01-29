@@ -1,0 +1,7 @@
+<h1>List of Kraft Products</h1>
+<div class="product-container">
+  <div class="product-item col-md-4" *ngFor="let product of products">
+    <img [src]="getImagePath(product.image)" (click)="onSelectProduct(product)"/>
+    <p>{{product.title}}</p>
+  </div>
+</div>

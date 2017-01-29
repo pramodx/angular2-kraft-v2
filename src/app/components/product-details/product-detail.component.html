@@ -1,0 +1,42 @@
+<div class="product-detail" *ngIf="product == null">
+    <h2>No Product Selected</h2>
+</div>
+<div class="product-detail" *ngIf="product!=null">
+    <section>
+        <h2>KRAFT - {{product.title}}</h2>
+        <p>{{product.caption}}</p>
+
+        <img [src]="getImagePath(product.image)" alt="{{product.title}}"/>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <dl>
+                    <dt>Ingredients</dt>
+                    <dd [innerHTML]="product.ingredients"></dd>
+
+                    <dt>Allergen</dt>
+                    <dd>{{product.allergen}}</dd>
+
+                    <dt>Quantity of Nuts per serving</dt>
+                    <dd>{{product.qty_nuts}}g</dd>
+
+                    <dt>Daily Nut Target</dt>
+                    <dd>{{product.nuts}}</dd>
+                </dl>
+            </div>
+            <div class="col-md-6 recipe-section">
+                <h4 *ngIf="recipes.length > 0">Recipes with this product</h4>
+                <ul>
+                    <li *ngFor="let recipe of recipes">
+                        <a href="#" [routerLink]="['/recipes/recipe/', recipe.$key]">{{recipe.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <nutrition-data [product]="product"></nutrition-data>
+    </section>
+
+</div>

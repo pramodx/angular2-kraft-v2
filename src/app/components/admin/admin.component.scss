@@ -1,0 +1,15 @@
+.login-container {
+    padding: 40px 0 20px;
+    span.error {
+        display: none;
+        padding: 2px 5px;
+        color: #f00;
+    }
+    .form-control {
+        &.ng-dirty.ng-invalid {
+            & + span.error {
+                display: inline-block;
+            }
+        }
+    }
+}

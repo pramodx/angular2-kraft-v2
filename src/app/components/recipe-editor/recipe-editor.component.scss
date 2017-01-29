@@ -1,0 +1,21 @@
+.editor-form {
+    h4 {
+        padding: 20px 0;
+        margin-bottom: 20px;
+        text-align: center;
+        border-top: 3px double #ccc;
+        border-bottom: 3px double #ccc;
+    }
+    span.error {
+        display: none;
+        padding: 2px 5px;
+        color: #f00;
+    }
+    .form-control {
+        &.ng-dirty.ng-invalid {
+            & + span.error {
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.recipe-detail {
+    padding-top: 20px;
+    header {
+        padding: 0 15px;
+    }
+    h3 {
+        padding: 20px 0;
+        margin-bottom: 20px;
+        text-align: center;
+        border-top: 3px double #ccc;
+        border-bottom: 3px double #ccc;
+    }
+    .product-image {
+        padding: 20px 0;
+        max-width: 100px;
+        margin: auto;
+    }
+    p.copy-text {
+        white-space: pre-line;
+    }
+    .recipe-image {
+        margin-top: 10px;
+        box-shadow: 3px 5px 8px #888
+    }
+    a.recipe-list-link {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,22 @@
+table.nutrition-info{
+    border-collapse: collapse;
+    border: 1px solid #666;
+    tr {
+        &:nth-child(even){
+            background-color: #eee;
+        }
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+            border-bottom: 1px solid #666;
+        }
+    }
+    tbody {
+        tr {
+            th {
+                text-align: left;
+            }
+        }
+    }
+}

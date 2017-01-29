@@ -1,0 +1,31 @@
+<div class="container" *ngIf="items">
+    <div class="recipe-list" *ngIf="recipes == null">
+        <h3>Loading Recipes...</h3>
+    </div>
+    <div class="recipe-list" *ngIf="recipes != null && recipes.length == 0">
+        <h3>No recipes yet!</h3>
+        <p>You may start by creating recipes by clicking <a [routerLink]="['editor/add']">here</a></p>
+    </div>
+    <div class="recipe-list" *ngIf="recipes != null && recipes.length > 0">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Recipe List
+                <a href="#" class="btn btn-primary add-recipe pull-right" [routerLink]="['editor/add']" *ngIf="isLoggedIn">Add Recipe</a>
+            </div>
+
+
+            <!-- List group -->
+            <table class="table">
+                <tr class="list-group-item" *ngFor="let recipe of recipes ">
+                    <td class="title"><a href="#" [routerLink]="['recipe/', recipe.uid]">{{recipe.name}}</a></td>
+                    <td *ngIf="isLoggedIn">
+                        <a href="#" [routerLink]="['editor/edit/', recipe.uid]" class="glyphicon glyphicon-pencil" title="Edit" aria-hidden="true"></a>
+                    </td>
+                    <td *ngIf="isLoggedIn">
+                        <a href="#" [routerLink]="['/recipes']" (click)="deleteRecipe(recipe.uid)" class="glyphicon glyphicon-remove" title="Delete" aria-hidden="true"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

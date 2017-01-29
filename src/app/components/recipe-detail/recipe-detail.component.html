@@ -1,0 +1,32 @@
+<div class="container recipe-detail" *ngIf="recipe | async">
+    <a href="#" [routerLink]="['/recipes']" class="btn recipe-list-link">Back to recipes</a>
+    <div class="row">
+        <div class="col-md-12">
+            <header>
+                <h3>{{ (recipe | async)?.name }}</h3>
+                <p><strong>Prep Time:</strong> {{ (recipe | async)?.preptime }}mins</p>
+                <p><strong>Serves:</strong> {{ (recipe | async)?.serves }}</p>
+            </header>
+            <div class="col-md-4">
+                <img *ngIf="product" class="pull-right product-image" [src]="getProductImage(productId)"/>
+                <h4>What you need</h4>
+                <p class="copy-text">
+                    {{ (recipe | async)?.need }}
+                </p>
+
+            </div>
+            <div class="col-md-4">
+                <h4>How to make it</h4>
+                <p class="copy-text">
+                    {{ (recipe | async)?.making }}
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="recipe-image" [src]="getImagePath((recipe | async)?.recipe_image)"
+                     alt="{{ (recipe | async)?.recipe_image }}">
+
+            </div>
+        </div>
+
+    </div>
+</div>
