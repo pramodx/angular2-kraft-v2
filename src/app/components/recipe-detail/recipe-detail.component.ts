@@ -2,14 +2,13 @@ import {Component, OnInit} from "@angular/core";
 import {ProductsService} from "../../services/products.service";
 import {AngularFire, FirebaseObjectObservable} from "angularfire2";
 import {Recipe} from "../../models/recipe";
-import {ROUTER_DIRECTIVES, ActivatedRoute, Router} from "@angular/router";
+import { ActivatedRoute, Router} from "@angular/router";
 import {Product} from "../../models/product";
 
 @Component({
 	selector: 'recipe-detail',
-	templateUrl: './app/components/recipe-detail/recipe-detail.component.html',
-	styleUrls: ['./app/components/recipe-detail/recipe-detail.component.css'],
-	directives: [ROUTER_DIRECTIVES],
+	templateUrl: './recipe-detail.component.html',
+	styleUrls: ['./recipe-detail.component.scss'],
 	providers: [ProductsService]
 })
 export class RecipeDetailComponent implements OnInit {

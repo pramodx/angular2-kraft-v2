@@ -1,13 +1,12 @@
-import {Component, OnInit, Output, OnDestroy} from "@angular/core";
+import {Component, OnInit, Output, OnDestroy, EventEmitter} from "@angular/core";
 import {Product} from "../../models/product";
 import {ProductsService} from "../../services/products.service";
-import {EventEmitter} from "@angular/compiler/src/facade/async";
 import {Router} from "@angular/router";
 @Component({
 	selector: 'products',
 	providers: [ProductsService],
-	styleUrls: ['./app/components/products/products.component.css'],
-	templateUrl: './app/components/products/products.component.html'
+	styleUrls: ['./products.component.scss'],
+	templateUrl: './products.component.html'
 })
 export class ProductsComponent implements OnInit {
 	products:Product[];

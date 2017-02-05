@@ -1,14 +1,14 @@
 import {Component, OnInit} from "@angular/core";
-import {ControlGroup, FormBuilder, Validators, Control} from "@angular/common";
+import {FormGroup, FormBuilder, Validators, FormControl} from "@angular/forms";
 import {AngularFire} from "angularfire2/angularfire2";
 import {Router} from "@angular/router";
 @Component({
 	selector: 'admin',
-	templateUrl: 'app/components/admin/admin.component.html',
-	styleUrls: ['app/components/admin/admin.component.css']
+	templateUrl: './admin.component.html',
+	styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit{
-	loginForm: ControlGroup;
+	loginForm: FormGroup;
 	
 	constructor(
 		private _formBuilder: FormBuilder,
@@ -52,7 +52,7 @@ export class AdminComponent implements OnInit{
 		this._router.navigate(['/products'])
 	}
 }
-function email(control: Control):{[s:string]:boolean}{
+function email(control: FormControl):{[s:string]:boolean}{
 	if (!control.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
 		
 		return { 'invalidEmailAddress': true };

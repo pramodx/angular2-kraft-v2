@@ -5,8 +5,7 @@ import {NutritionComponent} from "../nutrition/nutrition.component";
 import {Product} from "../../models/product";
 @Component({
 	selector: 'products-dashboard',
-	templateUrl: './app/components/products-dashboard/products-dashboard.component.html',
-	directives: [ProductsComponent, ProductDetailComponent, NutritionComponent]
+	templateUrl: './products-dashboard.component.html'
 })
 export class ProductsDashboardComponent {
 

@@ -2,14 +2,13 @@ import {Component, OnInit, OnDestroy} from "@angular/core";
 import {Product} from "../../models/product";
 import {NutritionComponent} from "../nutrition/nutrition.component";
 import {ProductsService} from "../../services/products.service";
-import {ActivatedRoute, ROUTER_DIRECTIVES} from "@angular/router";
-import {AngularFire, FirebaseListObservable} from "angularfire2/angularfire2";
+import {ActivatedRoute} from "@angular/router";
+import {AngularFire} from "angularfire2";
 import {Recipe} from "../../models/recipe";
 @Component({
 	selector: 'product-detail',
-	templateUrl: './app/components/product-details/product-detail.component.html',
-	styleUrls: ['./app/components/product-details/product-detail.component.css'],
-	directives: [NutritionComponent, ROUTER_DIRECTIVES],
+	templateUrl: './product-detail.component.html',
+	styleUrls: ['./product-detail.component.scss'],
 	providers: [ProductsService]
 })
 export class ProductDetailComponent implements OnInit, OnDestroy {

@@ -10,8 +10,8 @@ import {Nutrient} from "../../models/nutrient";
 	selector: 'nutrition-data',
 	providers: [NutritionService],
 	pipes: [FilterByPipe],
-	templateUrl: './app/components/nutrition/nutrition.component.html',
-	styleUrls: ['./app/components/nutrition/nutrition.component.css']
+	templateUrl: './nutrition.component.html',
+	styleUrls: ['./nutrition.component.scss']
 })
 export class NutritionComponent  {
 	@Input()

@@ -4,19 +4,19 @@ import 'rxjs/Rx';
 import {AngularFire} from "angularfire2";
 import {Product} from "../../models/product";
 import {ProductsService} from "../../services/products.service";
-import {Router, Route, ActivatedRoute} from "@angular/router";
-import {ControlGroup, Control, FormBuilder, Validators} from "@angular/common";
+import {Router, ActivatedRoute} from "@angular/router";
+import {FormGroup, FormControl, FormBuilder, Validators} from "@angular/forms";
 import {Recipe} from "../../models/recipe";
-import has = Reflect.has;
+// import has = Reflect.has;
 
 @Component({
 	selector: 'recipe-editor',
-	templateUrl: './app/components/recipe-editor/recipe-editor.component.html',
-	styleUrls: ['./app/components/recipe-editor/recipe-editor.component.css'],
+	templateUrl: './recipe-editor.component.html',
+	styleUrls: ['./recipe-editor.component.scss'],
 	providers: [DataService, ProductsService]
 })
 export class RecipeEditorComponent implements OnInit {
-	recipeEditForm: ControlGroup;
+	recipeEditForm: FormGroup;
 	private _mode = 'Add';
 	recipeIndex: string;
 	response: string;
@@ -162,14 +162,14 @@ export class RecipeEditorComponent implements OnInit {
 	}
 }
 
-function hasNumbers(control: Control):{[s:string]:boolean}{
+function hasNumbers(control: FormControl):{[s:string]:boolean}{
 	if (!('' + control.value).match('\\d+')) {
 		return {noNumbers: true};
 	}
 }
 
 
-function greaterThanZero(control: Control):{[s:string]:boolean}{
+function greaterThanZero(control: FormControl):{[s:string]:boolean}{
 	if (!(control.value > 0)) {
 		return {tooSmall: true};
 	}
