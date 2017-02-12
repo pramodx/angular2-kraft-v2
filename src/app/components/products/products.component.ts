@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
 	}
 
 	getImagePath(imgPath) {
-		return '/assets/img/range/img-big-' + imgPath + '.png';
+		return 'assets/img/range/img-big-' + imgPath + '.png';
 	}
 
 	onSelectProduct(product:Product) {

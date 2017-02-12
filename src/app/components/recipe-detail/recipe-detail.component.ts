@@ -44,11 +44,11 @@ export class RecipeDetailComponent implements OnInit {
 	}
 	
 	getProductImage(id) {
-		return '/assets/img/range/img-big-' + this.product.image + '.png';
+		return 'assets/img/range/img-big-' + this.product.image + '.png';
 	}
 	
 	getImagePath(imgName){
-		return '/assets/img/recipes/img-small-' + imgName + '.jpg';
+		return 'assets/img/recipes/img-small-' + imgName + '.jpg';
 	}
 		
 }

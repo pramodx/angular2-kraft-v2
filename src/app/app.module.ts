@@ -41,7 +41,7 @@ import {APP_BASE_HREF} from "@angular/common";
 		HttpModule ],
 	exports: [],
 	declarations: [ AppComponent, ProductsDashboardComponent, AdminComponent, MainNavComponent, NutritionComponent, ProductDetailComponent, ProductsComponent, RecipeDetailComponent, RecipeEditorComponent, RecipeListComponent, FilterByPipe ],
-	providers: [DataService, NutritionService, ProductsService, { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' }],
+	providers: [DataService, NutritionService, ProductsService],
 	bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

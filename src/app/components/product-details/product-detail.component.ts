@@ -52,7 +52,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 	}
 	
 	getImagePath(imgPath) {
-		return '/assets/img/range/img-big-' + imgPath + '.png';
+		return 'assets/img/range/img-big-' + imgPath + '.png';
 	}
 	
 	
