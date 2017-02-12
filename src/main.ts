@@ -24,9 +24,10 @@
 //         method: AuthMethods.Password
 //     })
 // ]);
-
+import './polyfills';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule }              from './app/app.module';
+import {polyfill} from "es6-promise";
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 

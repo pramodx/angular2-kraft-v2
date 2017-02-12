@@ -9,7 +9,6 @@ import {Recipe} from "../../models/recipe";
 	selector: 'product-detail',
 	templateUrl: './product-detail.component.html',
 	styleUrls: ['./product-detail.component.scss'],
-	providers: [ProductsService]
 })
 export class ProductDetailComponent implements OnInit, OnDestroy {
 	product:Product;
@@ -36,7 +35,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 						this._af.database.list('/data', {
 							query: {
 								orderByChild: 'product_id',
-								equalTo: id
+								equalTo: id,
+								indexOn: 'product_id'
 							}
 						}).subscribe(response => {
 							this.recipes = response;
@@ -52,7 +52,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 	}
 	
 	getImagePath(imgPath) {
-		return './img/range/img-big-' + imgPath + '.png';
+		return '/assets/img/range/img-big-' + imgPath + '.png';
 	}
 	
 	

@@ -12,8 +12,7 @@ import {Recipe} from "../../models/recipe";
 @Component({
 	selector: 'recipe-editor',
 	templateUrl: './recipe-editor.component.html',
-	styleUrls: ['./recipe-editor.component.scss'],
-	providers: [DataService, ProductsService]
+	styleUrls: ['./recipe-editor.component.scss']
 })
 export class RecipeEditorComponent implements OnInit {
 	recipeEditForm: FormGroup;

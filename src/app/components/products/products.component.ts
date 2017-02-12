@@ -3,10 +3,10 @@ import {Product} from "../../models/product";
 import {ProductsService} from "../../services/products.service";
 import {Router} from "@angular/router";
 @Component({
+	moduleId: module.id,
 	selector: 'products',
-	providers: [ProductsService],
-	styleUrls: ['./products.component.scss'],
-	templateUrl: './products.component.html'
+	styleUrls: ['products.component.scss'],
+	templateUrl: 'products.component.html'
 })
 export class ProductsComponent implements OnInit {
 	products:Product[];
@@ -27,7 +27,7 @@ export class ProductsComponent implements OnInit {
 	}
 
 	getImagePath(imgPath) {
-		return './img/range/img-big-' + imgPath + '.png';
+		return '/assets/img/range/img-big-' + imgPath + '.png';
 	}
 
 	onSelectProduct(product:Product) {

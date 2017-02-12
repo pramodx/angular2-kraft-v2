@@ -1,10 +1,10 @@
-import {RouterConfig, provideRouter} from "@angular/router";
+import { Routes, RouterModule} from "@angular/router";
 import {ProductsDashboardComponent} from "./components/products-dashboard/products-dashboard.component";
 import {AdminComponent} from "./components/admin/admin.component";
 import {RecipeListComponent} from "./components/recipe-list/recipe-list.component";
 import {RecipeEditorComponent} from "./components/recipe-editor/recipe-editor.component";
 import {RecipeDetailComponent} from "./components/recipe-detail/recipe-detail.component";
-export const routes: RouterConfig = [
+export const routes: Routes = [
 	{
 		path: '',
 		redirectTo: '/products',
@@ -45,6 +45,4 @@ export const routes: RouterConfig = [
 	}
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-	provideRouter(routes)
-]
+export const APP_ROUTER_PROVIDERS = RouterModule.forRoot(routes)

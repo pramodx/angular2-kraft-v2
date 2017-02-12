@@ -8,8 +8,7 @@ import {Product} from "../../models/product";
 @Component({
 	selector: 'recipe-detail',
 	templateUrl: './recipe-detail.component.html',
-	styleUrls: ['./recipe-detail.component.scss'],
-	providers: [ProductsService]
+	styleUrls: ['./recipe-detail.component.scss']
 })
 export class RecipeDetailComponent implements OnInit {
 	
