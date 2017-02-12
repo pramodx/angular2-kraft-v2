@@ -8,7 +8,7 @@ module.exports = __webpack_require__(444);
 
 /***/ }),
 
-/***/ 122:
+/***/ 121:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37,7 +37,7 @@ var ProductsService = (function () {
             .then(function (products) { return products.filter(function (product) { return product.id === id; })[0]; });
     };
     ProductsService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["d" /* Injectable */])(), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* Injectable */])(), 
         __metadata('design:paramtypes', [])
     ], ProductsService);
     return ProductsService;
@@ -159,8 +159,8 @@ var ProductsDashboardComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_products_service__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_products_service__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(79);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeDetailComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -201,10 +201,10 @@ var RecipeDetailComponent = (function () {
             .then(function (product) { return _this.product = product; });
     };
     RecipeDetailComponent.prototype.getProductImage = function (id) {
-        return '/assets/img/range/img-big-' + this.product.image + '.png';
+        return 'assets/img/range/img-big-' + this.product.image + '.png';
     };
     RecipeDetailComponent.prototype.getImagePath = function (imgName) {
-        return '/assets/img/recipes/img-small-' + imgName + '.jpg';
+        return 'assets/img/recipes/img-small-' + imgName + '.jpg';
     };
     RecipeDetailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Component */])({
@@ -228,8 +228,8 @@ var RecipeDetailComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__(418);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_products_service__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_products_service__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(233);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeEditorComponent; });
@@ -382,7 +382,7 @@ function greaterThanZero(control) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2__ = __webpack_require__(122);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecipeListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -467,7 +467,7 @@ var NutritionService = (function () {
         return Promise.resolve(__WEBPACK_IMPORTED_MODULE_1__data_nutrition__["a" /* NUTRITION */]);
     };
     NutritionService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Injectable */])(), 
         __metadata('design:paramtypes', [])
     ], NutritionService);
     return NutritionService;
@@ -560,12 +560,11 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_recipe_list_recipe_list_component__ = __webpack_require__(375);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_data_service__ = __webpack_require__(571);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_nutrition_service__ = __webpack_require__(376);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_products_service__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_products_service__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_router__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pipes_filter_data_pipe__ = __webpack_require__(570);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__app_routes__ = __webpack_require__(561);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angularfire2__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_common__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angularfire2__ = __webpack_require__(122);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -576,7 +575,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -620,7 +618,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* HttpModule */]],
             exports: [],
             declarations: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__components_products_dashboard_products_dashboard_component__["a" /* ProductsDashboardComponent */], __WEBPACK_IMPORTED_MODULE_6__components_admin_admin_component__["a" /* AdminComponent */], __WEBPACK_IMPORTED_MODULE_7__components_mainnav_mainnav_component__["a" /* MainNavComponent */], __WEBPACK_IMPORTED_MODULE_8__components_nutrition_nutrition_component__["a" /* NutritionComponent */], __WEBPACK_IMPORTED_MODULE_9__components_product_details_product_detail_component__["a" /* ProductDetailComponent */], __WEBPACK_IMPORTED_MODULE_10__components_products_products_component__["a" /* ProductsComponent */], __WEBPACK_IMPORTED_MODULE_11__components_recipe_detail_recipe_detail_component__["a" /* RecipeDetailComponent */], __WEBPACK_IMPORTED_MODULE_12__components_recipe_editor_recipe_editor_component__["a" /* RecipeEditorComponent */], __WEBPACK_IMPORTED_MODULE_13__components_recipe_list_recipe_list_component__["a" /* RecipeListComponent */], __WEBPACK_IMPORTED_MODULE_18__pipes_filter_data_pipe__["a" /* FilterByPipe */]],
-            providers: [__WEBPACK_IMPORTED_MODULE_14__services_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_15__services_nutrition_service__["a" /* NutritionService */], __WEBPACK_IMPORTED_MODULE_16__services_products_service__["a" /* ProductsService */], { provide: __WEBPACK_IMPORTED_MODULE_21__angular_common__["a" /* APP_BASE_HREF */], useValue: window['_app_base'] || '/' }],
+            providers: [__WEBPACK_IMPORTED_MODULE_14__services_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_15__services_nutrition_service__["a" /* NutritionService */], __WEBPACK_IMPORTED_MODULE_16__services_products_service__["a" /* ProductsService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
@@ -761,7 +759,7 @@ var NutritionComponent = (function () {
         this._nutritionService.getNutrition().then(function (data) { return _this.nutritions = data; });
     };
     __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Input */])(), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Input */])(), 
         __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_product__["a" /* Product */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__models_product__["a" /* Product */]) === 'function' && _a) || Object)
     ], NutritionComponent.prototype, "product", void 0);
     NutritionComponent = __decorate([
@@ -784,9 +782,9 @@ var NutritionComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_products_service__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_products_service__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2__ = __webpack_require__(122);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductDetailComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -835,7 +833,7 @@ var ProductDetailComponent = (function () {
         this.sub.unsubscribe();
     };
     ProductDetailComponent.prototype.getImagePath = function (imgPath) {
-        return '/assets/img/range/img-big-' + imgPath + '.png';
+        return 'assets/img/range/img-big-' + imgPath + '.png';
     };
     ProductDetailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Component */])({
@@ -857,7 +855,7 @@ var ProductDetailComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_products_service__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_products_service__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(79);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductsComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -876,7 +874,7 @@ var ProductsComponent = (function () {
     function ProductsComponent(_productsService, _router) {
         this._productsService = _productsService;
         this._router = _router;
-        this.selectedProduct = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
+        this.selectedProduct = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]();
     }
     ProductsComponent.prototype.ngOnInit = function () {
         this.getAllProducts();
@@ -886,7 +884,7 @@ var ProductsComponent = (function () {
         this._productsService.getAllProducts().then(function (products) { return _this.products = products; });
     };
     ProductsComponent.prototype.getImagePath = function (imgPath) {
-        return '/assets/img/range/img-big-' + imgPath + '.png';
+        return 'assets/img/range/img-big-' + imgPath + '.png';
     };
     ProductsComponent.prototype.onSelectProduct = function (product) {
         //this.selectedProduct.emit(product);
@@ -2126,7 +2124,7 @@ var FilterByPipe = (function () {
         return items.filter(function (item) { return item.productId === args; });
     };
     FilterByPipe = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Pipe */])({
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Pipe */])({
             name: 'filterBy'
         }), 
         __metadata('design:paramtypes', [])
@@ -2171,7 +2169,7 @@ var DataService = (function () {
             .map(function (response) { return response.json(); });
     };
     DataService = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Injectable */])(), 
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Injectable */])(), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* Http */]) === 'function' && _a) || Object])
     ], DataService);
     return DataService;
