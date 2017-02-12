@@ -19,6 +19,7 @@ import {RouterModule, } from "@angular/router";
 import {FilterByPipe} from "./pipes/filter-data.pipe";
 import {routes} from "./app.routes";
 import {AngularFireModule, AuthProviders, AuthMethods} from "angularfire2";
+import {APP_BASE_HREF} from "@angular/common";
 
 @NgModule({
 	imports:      [ BrowserModule,
@@ -40,7 +41,7 @@ import {AngularFireModule, AuthProviders, AuthMethods} from "angularfire2";
 		HttpModule ],
 	exports: [],
 	declarations: [ AppComponent, ProductsDashboardComponent, AdminComponent, MainNavComponent, NutritionComponent, ProductDetailComponent, ProductsComponent, RecipeDetailComponent, RecipeEditorComponent, RecipeListComponent, FilterByPipe ],
-	providers: [DataService, NutritionService, ProductsService],
+	providers: [DataService, NutritionService, ProductsService, { provide: APP_BASE_HREF, useValue: window['_app_base'] || '/' }],
 	bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
